@@ -6,5 +6,7 @@ script:
   # Docker Hub hack
   - sudo cp -av ./Dockerfile.template ./Dockerfile
   - make DG="docker run -v $(pwd):/var/dgdir slavek/distgen" GOMD2MAN="docker run -v $(pwd):/go/src/github.com/cpuguy83/go-md2man cpuguy83/go-md2man" build
+  - ls -al
+  - cat Dockerfile.rendered
 notifications:
     email: false
